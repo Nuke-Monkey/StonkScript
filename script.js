@@ -25,8 +25,13 @@ function equ_clean(){
     Equ = EquPreview
 }
 
+function equ_solve() {
+    return eval(Equ.replace(/[^0-9\(\)\+\-\*\/\.]/g, ""));
+}
+
 
 equ_init()
 console.log(Equ)
 equ_clean()
 console.log(Equ)
+console.log(equ_run())
