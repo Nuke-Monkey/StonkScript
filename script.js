@@ -25,8 +25,10 @@ function equ_clean(){
     Equ = EquPreview
 }
 
+var p = 0.6
+
 function equ_solve() {
-    return eval(Equ.replace(/[^0-9\(\)\+\-\*\/\.]/g, ""));
+    return eval(Equ.replace("p", "(${p})"));
 }
 
 
@@ -34,4 +36,4 @@ equ_init()
 console.log(Equ)
 equ_clean()
 console.log(Equ)
-console.log(equ_run())
+console.log(equ_solve())
